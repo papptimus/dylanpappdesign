@@ -135,12 +135,6 @@ lib.ssMetadata = [];
 
 
 
-(lib.patch_color = function() {
-	this.initialize(img.patch_color);
-}).prototype = p = new cjs.Bitmap();
-p.nominalBounds = new cjs.Rectangle(0,0,2048,2048);
-
-
 (lib.patch_BW = function() {
 	this.initialize(img.patch_BW);
 }).prototype = p = new cjs.Bitmap();
@@ -149,6 +143,12 @@ p.nominalBounds = new cjs.Rectangle(0,0,2048,2048);
 
 (lib.patch_em = function() {
 	this.initialize(img.patch_em);
+}).prototype = p = new cjs.Bitmap();
+p.nominalBounds = new cjs.Rectangle(0,0,2048,2048);
+
+
+(lib.patch_color = function() {
+	this.initialize(img.patch_color);
 }).prototype = p = new cjs.Bitmap();
 p.nominalBounds = new cjs.Rectangle(0,0,2048,2048);// helper functions:
 
@@ -2560,12 +2560,12 @@ lib.properties = {
 	width: 1920,
 	height: 1080,
 	fps: 24,
-	color: "#272D4D",
+	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/patch_color.png", id:"patch_color"},
 		{src:"images/patch_BW.png", id:"patch_BW"},
-		{src:"images/patch_em.png", id:"patch_em"}
+		{src:"images/patch_em.png", id:"patch_em"},
+		{src:"images/patch_color.png", id:"patch_color"}
 	],
 	preloads: []
 };
