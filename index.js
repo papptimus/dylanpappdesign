@@ -135,10 +135,16 @@ lib.ssMetadata = [];
 
 
 
-(lib._80sPoster = function() {
-	this.initialize(img._80sPoster);
+(lib.eightysPoster = function() {
+	this.initialize(img.eightysPoster);
 }).prototype = p = new cjs.Bitmap();
 p.nominalBounds = new cjs.Rectangle(0,0,768,1024);
+
+
+(lib.tiny_sub = function() {
+	this.initialize(img.tiny_sub);
+}).prototype = p = new cjs.Bitmap();
+p.nominalBounds = new cjs.Rectangle(0,0,1930,1063);
 
 
 (lib.patch_BW = function() {
@@ -157,12 +163,6 @@ p.nominalBounds = new cjs.Rectangle(0,0,2048,2048);
 	this.initialize(img.patch_em);
 }).prototype = p = new cjs.Bitmap();
 p.nominalBounds = new cjs.Rectangle(0,0,2048,2048);
-
-
-(lib.tiny_sub = function() {
-	this.initialize(img.tiny_sub);
-}).prototype = p = new cjs.Bitmap();
-p.nominalBounds = new cjs.Rectangle(0,0,1930,1063);
 
 
 (lib.TV = function() {
@@ -249,7 +249,7 @@ function getMCSymbolPrototype(symbol, nominalBounds, frameBounds) {
 	this.initialize(mode,startPosition,loop,{});
 
 	// Layer_1
-	this.instance = new lib._80sPoster();
+	this.instance = new lib.eightysPoster();
 
 	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
 
@@ -3663,11 +3663,11 @@ lib.properties = {
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/_80sPoster.png", id:"_80sPoster"},
+		{src:"images/eightysPoster.png", id:"eightysPoster"},
+		{src:"images/tiny_sub.png", id:"tiny_sub"},
 		{src:"images/patch_BW.png", id:"patch_BW"},
 		{src:"images/patch_color.png", id:"patch_color"},
 		{src:"images/patch_em.png", id:"patch_em"},
-		{src:"images/tiny_sub.png", id:"tiny_sub"},
 		{src:"images/TV.png", id:"TV"}
 	],
 	preloads: []
